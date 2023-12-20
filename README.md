@@ -34,7 +34,7 @@ The command deploys Metabase on the Kubernetes cluster in the default configurat
 To uninstall/delete the `my-release` deployment:
 
 ```bash
-$ helm delete my-release
+helm delete my-release
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
@@ -112,7 +112,7 @@ The above parameters map to the env variables defined in [metabase](http://githu
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
 ```bash
-$ helm install --name my-release \
+helm install --name my-release \
   --set timeZone=US/Pacific,password.complexity=strong,password.length=10 \
     stable/metabase
 ```
@@ -122,8 +122,7 @@ The above command sets the time zone to `US/Pacific`, `strong` user password com
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml stable/metabase
+helm install --name my-release -f values.yaml stable/metabase
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
-# metabase
