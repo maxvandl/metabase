@@ -107,19 +107,19 @@ session:
 
 # specify init containers, e.g. for module download
 extraInitContainers: []
-#  - name: download-modules
-#    image: "curlimages/curl:7.70.0"
-#    imagePullPolicy: "IfNotPresent"
-#    volumeMounts:
-#      - name: plugins
-#        mountPath: /plugins
-#    workingDir: /plugins
-#    command:
-#      - "/bin/sh"
-#      - "-ec"
-#      - |
-#        curl -Lso /plugins/athena.metabase-driver.jar \
-#                  https://github.com/dacort/metabase-athena-driver/releases/download/v1.1.0/athena.metabase-driver.jar
+ - name: download-module-starburst
+   image: "curlimages/curl:7.70.0"
+   imagePullPolicy: "IfNotPresent"
+   volumeMounts:
+     - name: plugins
+       mountPath: /plugins
+   workingDir: /plugins
+   command:
+     - "/bin/sh"
+     - "-ec"
+     - |
+       curl -Lso /plugins/starburst.metabase-driver.jar \
+                 https://github.com/starburstdata/metabase-driver/releases/download/4.1.0/starburst-4.1.0.metabase-driver.jar
 
 extraVolumeMounts:
   - name: plugins
