@@ -1,4 +1,6 @@
 # Metabase
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmaxvandl%2Fmetabase.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmaxvandl%2Fmetabase?ref=badge_shield)
+
 
 [Metabase](http://metabase.com) is the easy, open source way for everyone in your company to ask questions and learn from data.
 
@@ -126,3 +128,7 @@ helm install --name my-release -f values.yaml stable/metabase
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmaxvandl%2Fmetabase.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmaxvandl%2Fmetabase?ref=badge_large)
